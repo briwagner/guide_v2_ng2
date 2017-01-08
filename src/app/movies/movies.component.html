@@ -1,0 +1,29 @@
+<h2>Movies</h2>
+<div *ngFor="let mov of moviesShowing" class="movieTile">
+  <h3>{{ mov.title }}</h3>
+  <p>{{ joinArray(mov.genres) }}</p>
+  <p [style.visibility]="mov.qualityRating > -1 ? 'visible' : 'hidden'">Rating: {{ mov.qualityRating }}</p>
+  <p><em>{{ mov.description }}</em></p>
+  <div class="summary-container">
+    <div class="summary">
+      <div class="fadeout"></div>
+      <p>{{ mov.summary }}</p>
+    </div>
+    <p class="summary-more">More</p>
+  </div>
+
+  <div class="showtimes">
+    <p>showtimes: {{ mov.showtimes.length }}</p>
+    <div *ngFor="let showtime of mov.showtimes">
+      <h5>{{ showtime.name }}</h5>
+      <ul>
+        <li *ngFor="let time of showtime.times">{{ time | slice:-5 }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <h5>Cast</h5>
+  <ul class="cast">
+    <li *ngFor="let c of mov.cast">{{ c }}</li>
+  </ul>
+</div>

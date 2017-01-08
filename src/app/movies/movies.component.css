@@ -1,0 +1,45 @@
+div.movieTile {
+  width:220px;
+  /*display:inline-block;*/
+  float:left;
+  border: 1px solid cornflowerblue;
+  border-radius:4px;
+  background: linear-gradient(lightblue,lightcyan 60%);
+  box-shadow: inset 0px -3px 3px lightcyan;
+  padding:5px 10px;
+  margin-right:5px;
+}
+
+ul {
+  padding-left:0;
+}
+
+li {
+  list-style: none;
+}
+
+div.summary {
+  height:35px;
+  overflow:hidden;
+  border-bottom:5px solid lightcyan;
+}
+
+div.summary p {
+  position:relative;
+  top:-32px;
+}
+
+p.summary-more {
+  font-size: 75%;
+  text-align: right;
+  color:#333;
+}
+
+div.fadeout {
+  position:relative;
+  top:17px;
+  height:20px;
+  background:linear-gradient(rgba(224, 255, 255, 0.2), lightcyan);
+  z-index: 3;
+}
+
